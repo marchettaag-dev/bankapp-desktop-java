@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardClienteController">
+   <children>
+      <Label fx:id="labelCuenta" graphicTextGap="6.0" layoutX="92.0" layoutY="2.0" prefHeight="33.0" prefWidth="367.0" text="Cuenta: " textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="10.0" layoutY="35.0" prefHeight="98.0" prefWidth="380.0" style="-fx-background-color: #D3D3D3;">
+         <children>
+            <Label layoutX="13.0" layoutY="9.0" prefHeight="33.0" prefWidth="226.0" text="Dinero en Cuenta:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbDinero" layoutX="13.0" layoutY="42.0" prefHeight="44.0" prefWidth="416.0" text="\$0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+      <Button fx:id="btnRetirar" layoutX="51.0" layoutY="192.0" mnemonicParsing="false" onAction="#retirar" prefHeight="51.0" prefWidth="90.0" text="Retirar" />
+      <Button fx:id="btnTransferir" layoutX="189.0" layoutY="192.0" mnemonicParsing="false" onAction="#transferir" prefHeight="51.0" prefWidth="90.0" text="Transferir" />
+      <Button fx:id="btnDepositar" layoutX="326.0" layoutY="192.0" mnemonicParsing="false" onAction="#depositar" prefHeight="51.0" prefWidth="90.0" text="Depositar" />
+      <MenuButton fx:id="mbtnCuenta" layoutX="10.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-padding: 0px;" text="Ajustes">
+        <items>
+          <MenuItem fx:id="iCerrarSesion" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar Sesion" />
+            <MenuItem fx:id="iConfiguracion" mnemonicParsing="false" onAction="#cambiarConfiguracion" text="Configuración" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>

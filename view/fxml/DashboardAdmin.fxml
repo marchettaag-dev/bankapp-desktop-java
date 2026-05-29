@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardAdminController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="249.0" layoutY="15.0" prefHeight="33.0" prefWidth="131.0" text="Cuenta - ADMIN" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MenuButton fx:id="mbtnCuenta" layoutX="10.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="14.0" style="-fx-padding: 0px;">
+        <items>
+          <MenuItem fx:id="iCerrarSesion" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar Sesion" />
+        </items>
+      </MenuButton>
+      <Button fx:id="btnControl" layoutX="274.0" layoutY="449.0" mnemonicParsing="false" onAction="#control" prefHeight="16.0" prefWidth="90.0" text="Control">
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding></Button>
+      <TextField fx:id="txtBuscador" layoutX="15.0" layoutY="43.0" prefHeight="25.0" prefWidth="608.0" promptText="Buscador ..." />
+      <TabPane fx:id="tablaMuestra" layoutX="7.0" layoutY="79.0" prefHeight="352.0" prefWidth="615.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Clientes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="323.0" prefWidth="608.0">
+                     <children>
+                        <TableView fx:id="tablaClientes" prefHeight="147.0" prefWidth="615.0">
+                          <columns>
+                            <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="colNombre" prefWidth="126.0" text="Nombre" />
+                              <TableColumn fx:id="colApellido" prefWidth="109.0" text="Apellido" />
+                              <TableColumn fx:id="colEmail" prefWidth="304.0" text="Email" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="tablaCuentas1" layoutY="146.0" prefHeight="177.0" prefWidth="615.0">
+                           <columns>
+                              <TableColumn fx:id="colNumeroCuenta1" prefWidth="182.0" text="NumeroCuenta" />
+                              <TableColumn fx:id="colSaldo1" prefWidth="126.0" text="Saldo" />
+                              <TableColumn fx:id="colFechaCreacion1" prefWidth="230.0" text="FechaCreacion" />
+                              <TableColumn fx:id="colClienteID1" prefWidth="76.0" text="ClienteID" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Cuentas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablaCuentas" prefHeight="326.0" prefWidth="615.0">
+                          <columns>
+                            <TableColumn fx:id="colNumeroCuenta" prefWidth="182.0" text="NumeroCuenta" />
+                            <TableColumn fx:id="colSaldo" prefWidth="126.0" text="Saldo" />
+                              <TableColumn fx:id="colFechaCreacion" prefWidth="244.0" text="FechaCreacion" />
+                              <TableColumn fx:id="colClienteID" prefWidth="62.0" text="ClienteID" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Transacciones">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #808080;">
+                     <children>
+                        <TableView fx:id="tablaTransacciones" prefHeight="221.0" prefWidth="615.0">
+                          <columns>
+                            <TableColumn fx:id="colNumeroTransaccion" prefWidth="210.0" text="NumeroTransaccion" />
+                            <TableColumn fx:id="colTipo" prefWidth="119.0" text="Tipo" />
+                              <TableColumn fx:id="colMonto" prefWidth="108.0" text="Monto" />
+                              <TableColumn fx:id="colFechaHora" prefWidth="177.0" text="FechaHora" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="tablaCuentas2" layoutY="220.0" prefHeight="103.0" prefWidth="615.0">
+                           <columns>
+                              <TableColumn fx:id="colNumeroCuenta2" prefWidth="182.0" text="NumeroCuenta" />
+                              <TableColumn fx:id="colSaldo2" prefWidth="126.0" text="Saldo" />
+                              <TableColumn fx:id="colFechaCreacion2" prefWidth="230.0" text="FechaCreacion" />
+                              <TableColumn fx:id="colClienteID2" prefWidth="76.0" text="ClienteID" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

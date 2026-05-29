@@ -1,0 +1,7 @@
+package model.Exception;
+
+public class EmailIncorrectoException extends Exception {
+	public EmailIncorrectoException(String mensaje) {
+		super(mensaje);
+	}
+}
