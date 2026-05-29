@@ -28,7 +28,6 @@ Este proyecto fue diseñado como paso previo a Spring Boot para dominar:
 - **Email único** en el sistema
 
 ### Gestión de Cuentas
-- Crear múltiples cuentas por cliente
 - Alias personalizado para cada cuenta
 - Número de cuenta único (UUID)
 - Saldo con precisión de decimales (BigDecimal)
@@ -430,39 +429,6 @@ Cliente A → DashboardClienteController
           └→ Cliente B recibe dinero
 ```
 
-## 🎯 Comparación con Proyecto Anterior (Robot Management System)
-
-| Aspecto | Robot Management | BankApp Desktop |
-|--------|------------------|-----------------|
-| **Persistencia** | JSON local + CSV | SQLite con JDBC |
-| **BD** | Archivos en disco | Base de datos relacional |
-| **Acceso a Datos** | JsonUtils, CSVUtils | Repository Pattern |
-| **Lógica de Negocio** | En controladores | Capa Service separada |
-| **Seguridad** | Sin hashing | SHA-256 hashing |
-| **Transacciones** | No (JSON simple) | ACID con rollback |
-| **Validaciones** | Excepciones basic | Excepciones personalizadas robusts |
-| **Roles/Auth** | No | CLIENTE y ADMIN |
-| **DTOs** | No | Sí, para datos sensibles |
-| **Inyección Dep.** | No | Sí, manual (base Spring) |
-| **Patrones** | Herencia, Polimorfismo | Singleton, Repository, Service, DTO |
-| **Propósito** | Aprender POO básico | Aprender arquitectura empresarial |
-| **Siguiente paso** | Robot Management v2 | Spring Boot MVC |
-
-**Key Learning Journey:**
-```
-Robot Management System (JSON)
-           ↓
-      (Aprendiste: POO, herencia, polimorfismo, serialización)
-           ↓
-BankApp Desktop (SQLite + JDBC)
-           ↓
-      (Aprendiste: BD, transacciones, repositorio, servicios, DTOs)
-           ↓
-Spring Boot (REST + JPA)
-           ↓
-      (Spring maneja todo automáticamente con anotaciones)
-```
-
 ## 🚀 Cómo Usar
 
 ### Requisitos
@@ -525,5 +491,3 @@ Proyecto: Sistema Bancario - Preparación para Spring Boot
 Año: 2026
 
 ---
-
-**¡Listo para aprender Spring Boot! 🚀💼**
